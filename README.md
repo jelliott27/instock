@@ -7,20 +7,20 @@ Initially, I didn't create this to be reusable but decided it can be customized 
 
 Since reusability wasn't my chief goal a change to the website's source code could break the logic and you would never know the difference. Additionally, it doesn't have any verification so other issues could arise and go unnoticed such as a change in the target URI, cronjobd being disabled, etc. Hence why you should do a few dry runs to ensure it works before-and-during the automation step.  
 
-Down the road, I'll add more error-checks to mitigate the risk of failure.   
+Down the road, I'll add more error-checks to mitigate the risk of failure. </br>   
 
 **Dependencies**
 - wget
 - Swaks
 - Gmail account 
 
-**Instructions**
+**Instructions** </br>   
 1. Identify a recurring pattern in all fully-stocked items and compare against items that are out-of-stock to find a quantifiable way to alert on this change and notice a deviation from this baseline. Even something as simple as the words "In stock" occurring more than once or "Email me when the item is restocked" is less than one is sufficient.
 2. Specify the target URL/URI 
 3. Assuming you have Swaks already installed and an email account ready, add your credentials, target addresses, subject line, and body message.
 4. Test it using a metric that would default true, set up automation (cronjob is my favorite), and retest with cronjob. I always seek the help of https://crontab-generator.org 
-5. Wait and periodically test it 
-
+5. Wait and periodically test it </br>  
+ 
 **Recommendations / Notes**
 - Use a throwaway Gmail account with unique credentials since the script uses hardcoded credentials. Hardcoded credentials are always a terrible idea but since the stakes/risk are low and the blast radius is atomically small, it doesn't matter. Use email forwarding even if you don't want to add another email account to your personal device. 
 
