@@ -1,7 +1,7 @@
 # instock
 *Near real-time restock alerting* 
 
-InStock is a basic duct tape solution that I quickly wrote to monitor a specified webpage for a one-way change in the frequency of an arbitrary character(s). Once the condition is met it would then use Swaks to email a message to notify the recipient of a change such as a product is back in stock.   
+It's a basic duct tape solution that I quickly wrote to monitor a specified webpage for a one-way change in the frequency of an arbitrary character(s). Once the condition is met it would then use Swaks to email a message to notify the recipient of a change such as a product is back in stock.   
 
 Initially, I didn't create this to be reusable but decided it can be customized to fit other products. It requires you to find a pattern that all in-stock and out-of-stock products on an online store share in their HTML source code. For example, all in-stock products in my situation shared three euro symbols (€) but the out-of-stock products only had two euro symbols (€) since space was used to write "Out of stock". Therefore, once the specified webpage was updated and reflected >=3 € it would email indicating that it was restocked.  
 
